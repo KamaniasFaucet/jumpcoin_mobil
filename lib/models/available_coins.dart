@@ -6,28 +6,26 @@ import 'coin.dart';
 
 class AvailableCoins {
   static final Map<String, Coin> _availableCoinList = {
-    'sumcoin': Coin(
-      name: 'sumcoin',
-      displayName: 'Sumcoin',
-      uriCode: 'sumcoin',
-      letterCode: 'SUM',
+    'jumpcoin': Coin(
+      name: 'jumpcoin',
+      displayName: 'Jumpcoin',
+      uriCode: 'jump',
+      letterCode: 'JUMP',
       iconPath: 'assets/icon/sum-icon-48.png',
       iconPathTransparent: 'assets/icon/sum-icon-white-48.png',
       networkType: Network.mainnet,
-      opreturnSize: 256,
-      fractions: 6,
+      opreturnSize: 40,
+      fractions: 8,
       minimumTxValue: 10000,
       fixedFee: true,
       fixedFeePerKb: 0.01,
-      explorerUrl: 'https://sumexplorer.com',
-      genesisHash:
-          '000000f40beaad5804ce621cca107c37dccd119e887625fe79fe0f4e161f6219',
-      txVersion: 3,
+      explorerUrl: 'https://explorer.jumpcoin.net/',
+      genesisHash: '00000fa4edca746cef5d3e903ca8691f3fa9602e6055e351a53be2e109f9a4e3',
+      txVersion: 1,
       electrumRequiredProtocol: 1.4,
       electrumServers: [
-      'ssl://sumpos.electrum-sum.org:50002',
-      'ssl://sumpos2.electrum-sum.org:50002',
-      ],
+        'wss://explorer.nmnsc.com:50004',
+       ],
       marismaServers: [
         ('marisma.ppc.lol', 8443),
       ],
