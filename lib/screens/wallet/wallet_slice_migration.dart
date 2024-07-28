@@ -1,4 +1,4 @@
-import 'package:sumcoinlib_flutter/sumcoinlib_flutter.dart';
+import 'package:jumpcoinlib_flutter/jumpcoinlib_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -198,7 +198,7 @@ Widget build(BuildContext context) {
                   _buildFollowButton(
                     icon: Icons.code,
                     label: 'Follow Sumcoin on GitHub',
-                    url: 'https://github.com/sumcoinlabs',
+                    url: 'https://github.com/KamaniasFaucet',
                   ),
                   // Add some space
                   const SizedBox(height: 25),

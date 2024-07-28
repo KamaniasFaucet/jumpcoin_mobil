@@ -1673,18 +1673,18 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  sumcoinlib:
+  jumpcoinlib:
     dependency: transitive
     description:
-      name: sumcoinlib
+      name: jumpcoinlib
       sha256: "00bed996d182bede8c9e7ca77b2962e2cb0f2cd7db35375e6522e1a7219ead44"
       url: "https://pub.dev"
     source: hosted
     version: "0.0.2"
-  sumcoinlib_flutter:
+  jumpcoinlib_flutter:
     dependency: "direct main"
     description:
-      name: sumcoinlib_flutter
+      name: jumpcoinlib_flutter
       sha256: efc87f600e67a37da2aeae4a35f879c27a3a0b46cf8ccafa41e2096b98949b04
       url: "https://pub.dev"
     source: hosted

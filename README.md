@@ -2,8 +2,8 @@
 <a href="https://weblate.sumcoinwallet.org/engage/sumcoin-flutter/">
 <img src="https://weblate.sumcoinwallet.org/widgets/sumcoin-flutter/-/translations/svg-badge.svg" alt="Übersetzungsstatus" /></a>
 [![Codemagic build status](https://api.codemagic.io/apps/61012a37d885ed7a8c3e8b25/61012a37d885ed7a8c3e8b24/status_badge.svg)](https://codemagic.io/apps/61012a37d885ed7a8c3e8b25/61012a37d885ed7a8c3e8b24/latest_build)
-[![Static analysis and unit tests](https://github.com/sumcoinlabs/sumcoin_flutter/actions/workflows/static_analysis_and_unit_test.yml/badge.svg)](https://github.com/sumcoinlabs/sumcoin_flutter/actions/workflows/static_analysis_and_unit_test.yml)
-[![E2E Tests](https://github.com/sumcoinlabs/sumcoin_flutter/actions/workflows/e2e_tests.yml/badge.svg)](https://github.com/sumcoinlabs/sumcoin_flutter/actions/workflows/e2e_tests.yml)
+[![Static analysis and unit tests](https://github.com/KamaniasFaucet/sumcoin_flutter/actions/workflows/static_analysis_and_unit_test.yml/badge.svg)](https://github.com/KamaniasFaucet/sumcoin_flutter/actions/workflows/static_analysis_and_unit_test.yml)
+[![E2E Tests](https://github.com/KamaniasFaucet/sumcoin_flutter/actions/workflows/e2e_tests.yml/badge.svg)](https://github.com/KamaniasFaucet/sumcoin_flutter/actions/workflows/e2e_tests.yml)
 # sumcoin_flutter
 Wallet for Sumcoin using Electrumx as backend.  
 **App in constant development**  
@@ -39,11 +39,11 @@ You can also sign up for our open beta testing here:
 - will not mint
 
 ## Development
-**Build sumcoinlib**  
+**Build jumpcoinlib**  
 This repository relies on
-[sumcoinlib.](https://github.com/sumcoinlabs/sumcoinlib "https://github.com/sumcoinlabs/sumcoinlib")  
+[jumpcoinlib.](https://github.com/KamaniasFaucet/jumpcoinlib "https://github.com/KamaniasFaucet/jumpcoinlib")  
 Please follow the build instructions for your OS here:
-[README](https://github.com/sumcoinlabs/sumcoinlib/blob/master/coinlib/README.md)
+[README](https://github.com/KamaniasFaucet/jumpcoinlib/blob/master/coinlib/README.md)
 
 **Update icons**  
 `dart run flutter_launcher_icons:main`

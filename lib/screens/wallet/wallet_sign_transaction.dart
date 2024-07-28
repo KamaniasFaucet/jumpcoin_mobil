@@ -1,4 +1,4 @@
-import 'package:sumcoinlib_flutter/sumcoinlib_flutter.dart';
+import 'package:jumpcoinlib_flutter/jumpcoinlib_flutter.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

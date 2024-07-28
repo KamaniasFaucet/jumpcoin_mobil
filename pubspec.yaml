@@ -55,7 +55,7 @@ dependencies:
   app_bar_with_search_switch: ^1.5.4
   decimal: ^2.3.3
   characters: ^1.2.0
-  sumcoinlib_flutter: ^0.0.2
+  jumpcoinlib_flutter: ^0.0.2
 
   firebase_core: ^2.32.0
   firebase_analytics: ^10.8.10

@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:sumcoinlib_flutter/sumcoinlib_flutter.dart';
+import 'package:jumpcoinlib_flutter/jumpcoinlib_flutter.dart';
 
 import 'coin.dart';
 
