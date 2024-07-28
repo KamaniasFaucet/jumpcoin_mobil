@@ -106,13 +106,13 @@ Widget build(BuildContext context) {
                 children: [
                   Text(
                     'There is an UPCOMING Slice Wallet Migration Tool!',
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 20),
                   Text(
                     '''Read the News from May on this below.''',
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 15),
@@ -124,31 +124,31 @@ Widget build(BuildContext context) {
                   const SizedBox(height: 10),
                   Text(
                     'Currently Sumcoin Index is: \$$_sumcoinPrice',
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: Theme.of(context).textTheme.titleMedium,
                     textAlign: TextAlign.center,
                   ),
                   if (_lastUpdated != null)
                     Text(
                       'Last updated: ${_formatLastUpdated()}',
-                      style: Theme.of(context).textTheme.caption,
+                      style: Theme.of(context).textTheme.bodySmall,
                       textAlign: TextAlign.center,
                     ),
                   const SizedBox(height: 20),
                   Text(
                     '''This page will be updated to load a tool which will allow you to take the 12 words of your Slice Wallet, and claim them here in the Sumcoin Wallet when you participate in app features over time.''',
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 10),
                   Text(
                     '''Sumcoin Wallet affiliates are excited for the upcoming migration and there will be opportunities to trade Sumcoin for goods, currencies, and services in the coming weeks.''',
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 10),
                   Text(
                     '''Please keep checking back for updates on the app store and below for more information. Until then, get some free SUM now from the faucet link below! ''',
-                    style: Theme.of(context).textTheme.bodyText2,
+                    style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 15),
@@ -192,46 +192,66 @@ Widget build(BuildContext context) {
                   _buildFollowButton(
                     icon: Icons.video_library,
                     label: 'Subscribe to Sumcoin Index on YouTube',
-                    url: 'https://www.youtube.com/channel/UC7nKLhuOgKCDzrkGhp4BPoA',
+                    url: 'https://www.youtube.com/channel/UCXlXJs-OSZw4uP-ikFT1Gaw',
                   ),
                   const SizedBox(height: 15),
                   _buildFollowButton(
-                    icon: Icons.code,
-                    label: 'Follow Sumcoin on GitHub',
-                    url: 'https://github.com/KamaniasFaucet',
+                    icon: Icons.library_music,
+                    label: 'Follow Sumcoin Index on TikTok',
+                    url: 'https://www.tiktok.com/@sumcoinindex',
                   ),
-                  // Add some space
-                  const SizedBox(height: 25),
-                  // Add the banner ad widget here.
-                  BannerAdWidget(),
-                  // Add the native ad widget here.
-                  //const SizedBox(height: 25),
-                  //NativeAdWidget(),
-                  ],
-                ),
+                  const SizedBox(height: 15),
+                  _buildFollowButton(
+                    icon: Icons.link,
+                    label: 'Follow Sumcoin Index on Instagram',
+                    url: 'https://www.instagram.com/sumcoinindex/',
+                  ),
+                  const SizedBox(height: 15),
+                  _buildFollowButton(
+                    icon: Icons.link,
+                    label: 'Follow Sumcoin Index on Facebook',
+                    url: 'https://www.facebook.com/SumcoinIndex',
+                  ),
+                  const SizedBox(height: 15),
+                  _buildFollowButton(
+                    icon: Icons.link,
+                    label: 'Follow Sumcoin Index on Linkedin',
+                    url: 'https://www.linkedin.com/company/sumcoin/',
+                  ),
+                  const SizedBox(height: 15),
+                  _buildFollowButton(
+                    icon: Icons.email,
+                    label: 'Join the Sumcoin Email List',
+                    url: 'https://mailchi.mp/sumcoinindex/join',
+                  ),
+                ],
               ),
             ),
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 
-  Widget _buildFollowButton({required IconData icon, required String label, required String url}) {
-    return TextButton.icon(
+Widget _buildFollowButton({
+  required IconData icon,
+  required String label,
+  required String url,
+}) {
+  return SizedBox(
+    width: double.infinity,
+    child: OutlinedButton.icon(
       icon: Icon(icon),
-      onPressed: () {
-        _launchURL(url);
-      },
       label: Text(label),
-    );
-  }
-
-  void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
+      onPressed: () async {
+        if (await canLaunch(url)) {
+          await launch(url);
+        } else {
+          LoggerWrapper.logError('Button', 'launch', 'Could not launch $url');
+        }
+      },
+    ),
+  );
+}
 }
