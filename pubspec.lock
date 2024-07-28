@@ -1688,7 +1688,7 @@ packages:
       sha256: efc87f600e67a37da2aeae4a35f879c27a3a0b46cf8ccafa41e2096b98949b04
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.0.3"
   sync_http:
     dependency: transitive
     description:
