@@ -49,7 +49,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.sumcoinwallet"
+        applicationId "com.jumpcoinwallet"
         minSdkVersion 26
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode flutterVersionCode.toInteger()

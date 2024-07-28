@@ -134,7 +134,7 @@ class _WalletListScreenState extends State<WalletListScreen>
                                 ShareWrapper.share(
                                   context: context,
                                   message: Platform.isAndroid
-                                      ? 'https://play.google.com/store/apps/details?id=com.sumcoinwallet'
+                                      ? 'https://play.google.com/store/apps/details?id=com.jumpcoinwallet'
                                       : 'https://apps.apple.com/app/sumcoin-wallet/id6451452746',
                                 );
                               }

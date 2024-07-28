@@ -12,11 +12,11 @@ Wallet for Sumcoin using Electrumx as backend.
 
 
 <p align="center">
-     <a href="https://f-droid.org/packages/com.sumcoinwallet/">
+     <a href="https://f-droid.org/packages/com.jumpcoinwallet/">
 <img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
      height="80"></a>
-<a href="https://play.google.com/store/apps/details?id=com.sumcoinwallet"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+<a href="https://play.google.com/store/apps/details?id=com.jumpcoinwallet"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play" height="80"></a>
 </p>
 <p align="center">
@@ -25,7 +25,7 @@ Wallet for Sumcoin using Electrumx as backend.
 
 You can also sign up for our open beta testing here:
 
-* [Android](https://play.google.com/apps/testing/com.sumcoinwallet)
+* [Android](https://play.google.com/apps/testing/com.jumpcoinwallet)
 * [iOS](https://testflight.apple.com/join/MdYIC0K3)
 
 ![Screenshot_small](https://.png)

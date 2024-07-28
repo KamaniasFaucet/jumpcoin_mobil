@@ -45,7 +45,7 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>com.sumcoinwallet</key>
+			<key>com.jumpcoinwallet</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>

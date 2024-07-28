@@ -447,7 +447,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = 0.0.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sumcoinwallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumpcoinwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -594,7 +594,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = 0.0.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sumcoinwallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumpcoinwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -632,7 +632,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MARKETING_VERSION = 0.0.9;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sumcoinwallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jumpcoinwallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
