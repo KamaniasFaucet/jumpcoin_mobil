@@ -41,13 +41,13 @@ late Widget _homeWidget;
 late Locale _locale;
 
 void main() async {
-  // Init shared preferences
+  //init sharedpreferences
   WidgetsFlutterBinding.ensureInitialized();
   var prefs = await SharedPreferences.getInstance();
   setupFinished = prefs.getBool('setupFinished') ?? false;
   _locale = Locale(prefs.getString('language_code') ?? 'und');
 
-  // Clear storage if setup is not finished
+  //clear storage if setup is not finished
   if (!setupFinished) {
     await prefs.clear();
     LoggerWrapper.logInfo(
@@ -57,7 +57,7 @@ void main() async {
     );
   }
 
-  // Init Hive
+  //init hive
   await Hive.initFlutter();
   Hive.registerAdapter(CoinWalletAdapter());
   Hive.registerAdapter(WalletTransactionAdapter());
@@ -67,14 +67,15 @@ void main() async {
   Hive.registerAdapter(ServerAdapter());
   Hive.registerAdapter(PendingNotificationAdapter());
 
-  // Init jumpcoinlib
+  //init jumpcoinlib
   await loadJumpCoinlib();
 
-  // Init notifications
+  //init notifications
   var flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
   await flutterLocalNotificationsPlugin
-      .resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>()
+      .resolvePlatformSpecificImplementation<
+          IOSFlutterLocalNotificationsPlugin>()
       ?.requestPermissions(
         alert: true,
         badge: true,
@@ -89,7 +90,9 @@ void main() async {
   );
   await flutterLocalNotificationsPlugin.initialize(
     initializationSettings,
-    onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) async {
+    onDidReceiveNotificationResponse: (
+      NotificationResponse notificationResponse,
+    ) async {
       if (notificationResponse.payload != null) {
         LoggerWrapper.logInfo(
           'notification',
@@ -103,14 +106,14 @@ void main() async {
   final notificationAppLaunchDetails =
       await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
 
-  // Check if app is locked
+  //check if app is locked
   var secureStorageError = false;
   var failedAuths = 0;
   var sessionExpired = await checkSessionExpired();
 
   try {
     const secureStorage = FlutterSecureStorage();
-    // Clear secure storage if setup is not finished
+    //clear secureStorage if setup is not finished
     if (!setupFinished) {
       await secureStorage.deleteAll();
       LoggerWrapper.logInfo(
@@ -120,7 +123,8 @@ void main() async {
       );
     }
 
-    failedAuths = int.parse(await secureStorage.read(key: 'failedAuths') ?? '0');
+    failedAuths =
+        int.parse(await secureStorage.read(key: 'failedAuths') ?? '0');
   } catch (e) {
     secureStorageError = true;
     LoggerWrapper.logError('Main', 'secureStorage', e.toString());
@@ -129,7 +133,8 @@ void main() async {
   if (secureStorageError == true) {
     _homeWidget = const SecureStorageFailedScreen();
   } else {
-    // Check web session expired
+    //check web session expired
+
     if (setupFinished == false || sessionExpired == true) {
       _homeWidget = const SetupLandingScreen();
     } else if (failedAuths > 0) {
@@ -146,7 +151,7 @@ void main() async {
   }
 
   if (!kIsWeb) {
-    // Init logger
+    //init logger
     await FlutterLogs.initLogs(
       logLevelsEnabled: [
         LogLevel.INFO,
@@ -173,7 +178,7 @@ void main() async {
     );
   }
 
-  // Run
+  //run
   runApp(const SumcoinApp());
 }
 
