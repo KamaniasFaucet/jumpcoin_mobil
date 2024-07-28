@@ -1,11 +1,11 @@
-import 'package:sumcoinlib_flutter/sumcoinlib_flutter.dart';
+import 'package:jumpcoinlib_flutter/jumpcoinlib_flutter.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sumcoin/models/available_coins.dart';
 import 'package:sumcoin/tools/validators.dart';
 
 void main() async {
   //init coinlib
-  await loadSumCoinlib();
+  await loadJumpCoinlib();
 
   group('validators', () {
     final network = AvailableCoins.getSpecificCoin('sumcoin').networkType;

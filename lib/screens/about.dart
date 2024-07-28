@@ -86,7 +86,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       ),
                       TextButton(
                         onPressed: () => _launchURL(
-                          'https://github.com/sumcoinlabs/sumcoin_flutter/blob/main/LICENSE',
+                          'https://github.com/KamaniasFaucet/jumcoin_mobil/blob/main/LICENSE',
                         ),
                         child: Text(
                           AppLocalizations.instance.translate(
@@ -124,7 +124,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       ),
                       TextButton(
                         onPressed: () => _launchURL(
-                          'https://github.com/sumcoinlabs/sumcoin_flutter',
+                          'https://github.com/KamaniasFaucet/jumcoin_mobil',
                         ),
                         child: Text(
                           AppLocalizations.instance.translate(
@@ -142,7 +142,7 @@ class _AboutScreenState extends State<AboutScreen> {
                       ),
                       TextButton(
                         onPressed: () => _launchURL(
-                          'https://github.com/sumcoinlabs/sumcoin_flutter/blob/main/data_protection.md',
+                          'https://github.com/KamaniasFaucet/jumcoin_mobil/blob/main/data_protection.md',
                         ),
                         child: Text(
                           AppLocalizations.instance.translate(

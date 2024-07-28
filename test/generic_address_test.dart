@@ -1,4 +1,4 @@
-import 'package:sumcoinlib_flutter/sumcoinlib_flutter.dart';
+import 'package:jumpcoinlib_flutter/jumpcoinlib_flutter.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sumcoin/tools/generic_address.dart';
 
